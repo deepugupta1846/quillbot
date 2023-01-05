@@ -1,0 +1,103 @@
+
+.header-container{
+    width: 100%;
+    height: 100vh;
+    background-color: aqua;
+    background-image: url("../images/backgroundimage.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* header title */
+.header-title{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+}
+.header-title h1{
+    text-align: center;
+}
+.header-title button{
+    background:none;
+    border: none;
+    outline: none;
+    background-color: #308140;
+    padding: 15px 80px;
+    color: #ffffff;
+    border-radius: 30px;
+    font-size: 18px;
+}
+
+
+/* header content */
+
+.header-content{
+    width: 90%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+
+}
+.header-left-content{
+    width: 500px;
+    height: auto;
+    
+}
+.header-left-card{
+    width: 100%;
+    height: auto;
+   
+}
+.header-left-card img{
+    width: 100%;
+}
+
+.header-right-content{
+    width: 600px;
+    height: 400px;
+}
+
+/* .header-right-card */
+.header-right-card{
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+
+}
+.header-right-card-title{
+    font-size: 18px;
+    font-weight: 700;
+    
+}
+.header-right-card-text{
+    font-size: 20px;
+}
+.header-progress-bar{
+    width: 80%;
+    height: 5px;
+    margin-top: 5px;
+    background-color:#eeeeee;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .header-content{
+        flex-direction: column;
+    }
+    .header-container{
+         height: auto;
+    }
+    .header-left-content{
+        width: 100%;
+        height: auto;
+    }
+    .header-right-content{
+        width: 100%;
+        height: 400px;
+    }
+}

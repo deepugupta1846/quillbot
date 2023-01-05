@@ -1,0 +1,135 @@
+
+/* benefit container */
+
+.benefit-container{
+    width: 100%;
+    height: 100vh;
+    margin-top: auto;
+}
+
+/* header */
+.benefit-header{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+/* title */
+.benefit-header h1{
+    text-align: center;
+    font-weight: 700;
+}
+/* sub title */
+.benefit-header label{
+    width: 500px;
+    font-weight: 700;
+}
+
+/* make circle graph */
+.circle {
+    position: relative;
+    width: 132px;
+    height: 133px;
+    margin: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+/* .circle .per-75 {
+    background-image: conic-gradient(#499557 75%, #eeeeee 0);
+  } */
+  .circle .inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 115px;
+    height: 115px;
+    background: #fff;
+    border-radius: 50%;
+    color: #499557;
+  }
+  .percentage{
+    font-size: 1.8rem;
+    font-weight: 1000;
+  }
+
+  .percentage-title{
+    font-size: 1rem;
+  }
+
+
+
+  .graph-circle-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+  .graph-circle-content{
+    width: 70%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .circle-title{
+    width: 400px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    margin-top: -80px;
+    margin-bottom: 100px;
+    font-weight: 700;
+  }
+  .benefit-footer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .benefit-footer button{
+    width:400px;
+    height: auto;
+    border: none;
+    background-color: #499557;
+    font-size: 20px;
+    padding: 10px;
+    color: #fff;
+    border-radius: 50px;
+  }
+  .benefit-footer h2{
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: 700;
+  }
+  .benefit-footer p{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .graph-circle-content{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+}
+
