@@ -21,13 +21,10 @@ export const Header = () => {
     four: "#308140",
   });
 
-  const [imageUpdateData, setImageUpdateData] = useState(0);
-  const printNumbersForEvery2Sec = (n, i) => {
-    let value;
-
+  const increseNumberEveryFiveSecond = (n, i) => {
     for (let j = 1; j <= n; j++) {
       setTimeout(() => {
-        if (i == 0) {
+        if (i === 0) {
           setProgressWidth({ one: j, two: 0, three: 0, four: 0 });
           setTitleColor({
             one: "#000000",
@@ -35,7 +32,7 @@ export const Header = () => {
             three: "#308140",
             four: "#308140",
           });
-        } else if (i == 1) {
+        } else if (i === 1) {
           setProgressWidth({ one: 0, two: j, three: 0, four: 0 });
           setTitleColor({
             one: "#308140",
@@ -43,7 +40,7 @@ export const Header = () => {
             three: "#308140",
             four: "#308140",
           });
-        } else if (i == 2) {
+        } else if (i === 2) {
           setProgressWidth({ one: 0, two: 0, three: j, four: 0 });
           setTitleColor({
             one: "#308140",
@@ -51,7 +48,7 @@ export const Header = () => {
             three: "#000000",
             four: "#308140",
           });
-        } else if (i == 3) {
+        } else if (i === 3) {
           setProgressWidth({ one: 0, two: 0, three: 0, four: j });
           setTitleColor({
             one: "#308140",
@@ -63,13 +60,25 @@ export const Header = () => {
       }, j * 50);
     }
   };
+  const increseOneNumberEveryFiveSecond = (n) => {
+    for (let j = 1; j <= n; j++) {
+      setTimeout(() => {
+        setProgressWidth({ one: 0, two: 0, three: 0, four: j });
+        setTitleColor({
+          one: "#308140",
+          two: "#308140",
+          three: "#308140",
+          four: "#000000",
+        });
+      }, j * 50);
+    }
+  };
   useEffect(() => {
-    console.log("hello");
+    increseOneNumberEveryFiveSecond(100);
     let i = 0;
     setInterval(() => {
-      printNumbersForEvery2Sec(100, i);
+      increseNumberEveryFiveSecond(100, i);
       setImageUrl(imagedata[i]);
-      setImageUpdateData(i);
       i = i + 1;
       if (i >= imagedata.length) {
         i = 0;
@@ -86,7 +95,7 @@ export const Header = () => {
         <div className="header-content">
           <div className="header-left-content">
             <div className="header-left-card">
-              <img src={imageurl} />
+              <img src={imageurl} alt="" />
             </div>
           </div>
           <div className="header-right-content">

@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../css/benefit.css";
 import { GraphCircleWithText } from "./GraphCircleWithText";
+import Aos from "aos";
+import "aos/dist/aos.css";
 export const BenefitSection = () => {
+  const onscroll = () => {};
+  useEffect(() => {
+    Aos.init({ duration: 500 });
+  }, []);
+
   return (
     <>
       <div className="benefit-container">
@@ -13,10 +20,10 @@ export const BenefitSection = () => {
           </label>
         </div>
         <div className="graph-circle-container">
-          <div className="graph-circle-content">
+          <div className="graph-circle-content" data-aos="zoom-in">
             <div>
               <GraphCircleWithText
-                percent="75%"
+                percent="75"
                 number="75%"
                 text="time saved"
                 title="Average time savings per writing project."
@@ -24,15 +31,15 @@ export const BenefitSection = () => {
             </div>
             <div>
               <GraphCircleWithText
-                percent="100%"
-                number="50"
+                percent="100"
+                number="50+"
                 text="million"
                 title="Trusted by millions worldwide."
               />
             </div>
             <div>
               <GraphCircleWithText
-                percent="85%"
+                percent="85"
                 number="85%"
                 text="of students"
                 title="Who reported their grades improved after using QuillBot"
