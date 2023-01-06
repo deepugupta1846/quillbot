@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from "react";
 export const GraphCircleWithText = (props) => {
   const percent = props.percent;
+  const number = props.number;
   const [percentWidth, setWidthPercent] = useState(0);
+  const [showNumber, setShowNumber] = useState(0);
   const increseOneNumberEveryFiveSecond = (n) => {
     for (let j = 1; j <= n; j++) {
       setTimeout(() => {
         setWidthPercent(j);
-      }, j * 10);
+        setShowNumber(j);
+      }, j * 50);
     }
   };
+
   useEffect(() => {
     increseOneNumberEveryFiveSecond(percent);
   }, []);
@@ -22,7 +26,10 @@ export const GraphCircleWithText = (props) => {
           }}
         >
           <div className="inner">
-            <label className="percentage">{props.number}</label>
+            <label className="percentage">
+              {showNumber}
+              {props.symboll}
+            </label>
             <label className="percentage-title">{props.text}</label>
           </div>
         </div>

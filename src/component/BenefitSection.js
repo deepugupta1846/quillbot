@@ -24,7 +24,8 @@ export const BenefitSection = () => {
             <div>
               <GraphCircleWithText
                 percent="75"
-                number="75%"
+                number="75"
+                symboll="%"
                 text="time saved"
                 title="Average time savings per writing project."
               />
@@ -32,7 +33,8 @@ export const BenefitSection = () => {
             <div>
               <GraphCircleWithText
                 percent="100"
-                number="50+"
+                number="50"
+                symboll="+"
                 text="million"
                 title="Trusted by millions worldwide."
               />
@@ -40,7 +42,8 @@ export const BenefitSection = () => {
             <div>
               <GraphCircleWithText
                 percent="85"
-                number="85%"
+                number="85"
+                symboll="%"
                 text="of students"
                 title="Who reported their grades improved after using QuillBot"
               />
